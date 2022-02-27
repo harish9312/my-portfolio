@@ -91,4 +91,30 @@ const navItems = [
     ),
     link: "/experience",
   },
+  {
+    name: "Projects",
+    id: "projects",
+    icon: (
+      <span
+        className="iconify"
+        data-icon="mdi:web-check"
+        data-width="60"
+        data-height="60"
+      ></span>
+    ),
+    link: "/projects",
+  },
+  {
+    name: "Resume",
+    id: "resume",
+    icon: (
+      <span
+        className="iconify"
+        data-icon="ant-design:file-text-filled"
+        data-width="60"
+        data-height="60"
+      ></span>
+    ),
+    link: "/resume",
+  },
 ];

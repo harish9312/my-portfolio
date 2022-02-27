@@ -8,6 +8,31 @@
 .mobile-picker {
   display: none;
 }
+.nav-item.active {
+  a {
+    color: #fff;
+    font-weight: 600;
+  }
+  svg {
+    path {
+      fill: #5aafff;
+    }
+  }
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    a {
+      color: white;
+    }
+
+    svg {
+      path {
+        fill: #5aafff;
+      }
+    }
+  }
+}
+
 .nav-item {
   margin: 0px 10px;
   transition: all 0.2s ease-in-out;

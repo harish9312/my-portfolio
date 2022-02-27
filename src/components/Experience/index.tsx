@@ -97,7 +97,7 @@ export const Experience = () => {
           <h4 className="vertical-timeline-element-subtitle">
             Adarsh Higher Secondary School, Korba
           </h4>
-          <p>Creative Direction, User Experience, Visual Design</p>
+          <p>Science Domain, Math's Subject</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
