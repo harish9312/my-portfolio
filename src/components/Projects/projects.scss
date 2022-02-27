@@ -73,3 +73,17 @@
     cursor: pointer;
   }
 }
+@media only screen and (min-width: 374px) and (max-width: 768px) {
+  .card {
+    a {
+      flex-direction: column;
+    }
+  }
+  .card .project-title {
+    border-bottom: 1px solid;
+    border-right: 0px;
+  }
+  .project-container {
+    margin: 0;
+  }
+}
