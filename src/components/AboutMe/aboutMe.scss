@@ -1,0 +1,88 @@
+#particles-js {
+  display: none;
+}
+.about-me-overlay {
+  background: linear-gradient(to right, #42275a, #734b6d);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  min-width: 69vw;
+  z-index: -1;
+}
+.about-me {
+  color: white;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 40px;
+  max-width: 600px;
+  hr {
+    width: 100%;
+  }
+}
+
+.id-card {
+  margin: auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  display: flex;
+  background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: white;
+  padding: 30px;
+  align-items: center;
+}
+
+.left {
+  .my-image {
+    max-height: 150px;
+    max-width: 150px;
+    border: 2px solid;
+    border-radius: 100%;
+  }
+}
+
+.right {
+  text-align: left;
+  width: 100%;
+  div {
+    padding: 5px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+
+  .name {
+    font-size: 26px;
+    font-weight: 500;
+  }
+}
+
+.about-me-details {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.about-me-text {
+  font-size: 3rem;
+  padding: 30px 0px 0px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+@media only screen and (min-width: 374px) and (max-width: 768px) {
+  .id-card {
+    margin: 30px;
+    flex-direction: column;
+  }
+  .right {
+    text-align: center;
+  }
+  .laptop {
+    width: 100%;
+  }
+}

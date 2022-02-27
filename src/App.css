@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  height: 100%;
+}
+
+html,
+body,
+#root,
+.slide-routes {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  overflow: auto !important;
+
 }
 
 .App-logo {
@@ -32,6 +43,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

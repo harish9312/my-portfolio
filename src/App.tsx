@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import SlideRoutes from "react-slide-routes";
+import ReactTooltip from "react-tooltip";
+import "./App.css";
+import { AboutMe } from "./components/AboutMe";
+import { Experience } from "./components/Experience";
+import { Home } from "./components/Home";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ReactTooltip />
+      <HashRouter>
+        <Navbar />
+        <SlideRoutes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/experience" element={<Experience />} />
+        </SlideRoutes>
+      </HashRouter>
     </div>
   );
 }
