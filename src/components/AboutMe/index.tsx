@@ -4,6 +4,7 @@ import harish from "./harish-id.png";
 import { marked } from "marked";
 import { LaptopScreen } from "./LaptopScreen";
 import Typist from "react-typist";
+import { HeaderTitle } from "../reusableComponents/HeaderTitle";
 
 const date1: any = new Date("7/24/2017");
 const date2: any = new Date();
@@ -29,23 +30,7 @@ export const AboutMe = () => {
   return (
     <div className="about-me">
       <div className="about-me-overlay" />
-      <Typist
-        cursor={{
-          hideWhenDone: true,
-        }}
-        onTypingDone={() => {
-          const aboutMe = document.getElementById(aboutId) as any;
-          aboutMe.style.opacity = "1";
-        }}
-      >
-        <div className="about-me-text">About Me</div>
-      </Typist>
-      <hr
-        style={{
-          maxWidth: "50%",
-          marginBottom: "20px",
-        }}
-      />
+      <HeaderTitle id={aboutId}>About</HeaderTitle>
       <div id={aboutId} className="about-me-details">
         <div className="id-card">
           <div className="left">

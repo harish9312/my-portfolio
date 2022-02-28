@@ -1,12 +1,12 @@
 import * as React from "react";
+import { HeaderTitle } from "../reusableComponents/HeaderTitle";
 import "./projects.scss";
 import { projects } from "./projectsData";
 export const Projects = () => {
   return (
     <div className="project-main">
       <div className="bg-overlay" />
-      <div className="header">Projects</div>
-      <hr style={{ width: "50%", borderColor: "white" }} />
+      <HeaderTitle>Projects</HeaderTitle>
       <div className="project-container">
         {projects.map((proj, i) => {
           return (
