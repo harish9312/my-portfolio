@@ -1,3 +1,4 @@
+import * as React from "react";
 import Typist from "react-typist";
 
 import "./headerTitle.scss";
