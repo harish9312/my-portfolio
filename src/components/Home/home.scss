@@ -35,6 +35,9 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
       }
     }
   }
+  .image-container {
+    z-index: -1;
+  }
   .overlay {
     position: absolute;
     width: 100%;

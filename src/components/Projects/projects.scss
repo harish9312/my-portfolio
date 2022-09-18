@@ -32,6 +32,9 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: white;
   max-width: 550px;
+  &:first-child {
+    margin-top: 0px;
+  }
   .project-logo {
     width: 200px;
     padding: 15px;

@@ -9,8 +9,7 @@ body,
 .slide-routes {
   height: 100%;
   font-family: 'Raleway', sans-serif;
-  overflow: auto !important;
-
+  overflow-y: auto !important;
 }
 
 .App-logo {
