@@ -2,6 +2,8 @@ $gradientOne: linear-gradient(120deg, #c2ff38 0%, #ff3f48 100%);
 $gradientTwo: linear-gradient(to right, #8360c3, #2ebf91);
 $gradientThree: linear-gradient(to right, #fffbd5, #b20a2c);
 $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gloria+Hallelujah&display=swap');
+
 #particles-js {
   background-color: white;
   position: fixed;
@@ -10,34 +12,48 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   height: 100%;
   width: 100%;
 }
+
+.home-section {
+  top: 30px;
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+.information {
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+  background: rgb(255 255 255 / 50%);
+  color: #302f2f;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-family: 'Comfortaa', cursive;
+  padding: 0px 50px;
+  padding-top: 70px;
+}
+
 .home {
   display: flex;
   height: 100%;
-  .gradient-selector {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .gradient-type {
-      width: 30px;
-      height: 30px;
-      margin: 20px;
+  color: white;
+
+
+  .my-image-container {
+    padding: 10px;
+    background: #fffbff;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    top: 90px;
+
+    .my-image {
       border-radius: 100%;
-      border: 1px solid white;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      &:hover {
-        cursor: pointer;
-      }
-      &.active {
-        border-width: 2px;
-      }
     }
   }
+
   .image-container {
     z-index: -1;
   }
+
   .overlay {
     position: absolute;
     width: 100%;
@@ -45,10 +61,9 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     left: 0;
     top: 0;
     transition: all 0.5s ease;
-    // background-image: $gradientFour;
-    opacity: 0.5;
     z-index: -1;
   }
+
   .left-section,
   .right-section {
     display: flex;
@@ -58,43 +73,66 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     width: 50%;
     flex-direction: column;
   }
+
   .left-section {
     .stack-container {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
+
       .tech-icon {
         margin: 20px;
       }
     }
+
+    .designation {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid gray;
+    }
+
     .tech-stack {
       font-size: 30px;
       margin-top: 40px;
       border-top: 2px solid;
       padding-top: 30px;
     }
+
     .left-main {
       .intro {
         font-weight: 400;
-        font-size: 4rem;
         margin-bottom: 0;
+        font-size: 2.4rem;
+
+        .my-name {
+          margin-left: 20px;
+          font-size: 4rem;
+          font-family: 'Courgette', cursive;
+        }
+
       }
+
+
       .i-am {
         font-weight: 200;
         font-size: 3rem;
       }
+
       margin-bottom: 20px;
     }
+
     .developer,
     .software-developer {
       font-size: 2rem;
       text-decoration: uppercase;
     }
+
     .tech-section {
       height: 0;
       transition: height 0.5s ease-in;
       overflow: hidden;
     }
   }
+
   .right-section {
     img {
       transform: scale(1.5);
@@ -103,34 +141,115 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
 @media only screen and (min-width: 374px) and (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    .gradient-selector {
-      flex-wrap: wrap;
 
-      position: relative;
+  .gradient-selector {
+    z-index: 100;
+
+  }
+
+  .mobile-touch {
+    position: fixed;
+    display: block;
+    right: 5px;
+    background: rgb(255 255 255 / 62%);
+    height: 70px;
+    overflow: hidden;
+    transition: height .5s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .mobile-height {
+    overflow: hidden;
+    position: fixed;
+    display: block;
+    background: rgb(255 255 255 / 62%);
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: 5px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px,
+      rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    transition: height .5s;
+    height: 325px;
+  }
+
+
+
+  .home {
+
+    flex-direction: column;
+
+   
+    .home-section {
+      display: block;
+
     }
+
+    .my-image-container {
+      top: 90px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 230px;
+      height: 230px;
+
+      .my-image {
+        width: 200px;
+        height: 200px;
+
+      }
+    }
+
+    .information {
+      width: 90%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
     .left-section,
     .right-section {
       width: 100%;
     }
+
     .right-section {
+      display: none;
+
       img {
         width: 100%;
         transform: none;
       }
     }
+
     .left-section {
       .tech-stack {
         display: none;
       }
+
+
+
       .stack-container {
-        margin-top: 70px;
+        margin-top: 10px;
       }
+
       .left-main {
+        margin-bottom: 1px;
+
         .intro {
-          font-size: 3rem;
+          font-size: 2rem;
+
+          .my-name {
+            font-size: 3rem;
+          }
+
         }
+
+      }
+
+      .software-developer {
+        font-size: 1.3rem;
       }
     }
   }

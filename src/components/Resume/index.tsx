@@ -7,7 +7,7 @@ export const Resume = () => {
         style={{ minHeight: "90vh" }}
         width="100%"
         height="100%"
-        src="https://drive.google.com/file/d/13j32LFXmwfkUbX81wpxVfYfHcKL3ybGV/preview"
+        src="https://drive.google.com/file/d/1keEZVuWS_GQ32WxfE4gnf7YQxTIEvwGt/view?usp=share_link"
         allowFullScreen
         title="My Resume"
       ></iframe>

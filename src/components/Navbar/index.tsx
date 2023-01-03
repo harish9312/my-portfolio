@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [isOpen, setOpen] = React.useState(false);
   return (
     <div className="navbar-main-top">
-      <div className={`navbar-main ${isOpen ? "open" : "close"}`}>
+      <div className={`navbar-main ${isOpen ? "open" : "close"}`}  >
         <div className="mobile-picker">
           {!isOpen && (
             <div onClick={() => setOpen(true)}>
@@ -35,9 +35,8 @@ export const Navbar = () => {
             <div
               key={i}
               onClick={() => setOpen(false)}
-              className={`nav-item ${
-                router.pathname === x.link ? "active" : ""
-              }`}
+              className={`nav-item ${router.pathname === x.link ? "active" : ""
+                }`}
             >
               <Link to={x.link}>
                 <div className="icon">{x.icon}</div>
@@ -47,7 +46,7 @@ export const Navbar = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
@@ -66,19 +65,6 @@ const navItems = [
     link: "/",
   },
   {
-    name: "About",
-    id: "about",
-    icon: (
-      <span
-        className="iconify"
-        data-icon="ep:info-filled"
-        data-width="60"
-        data-height="60"
-      ></span>
-    ),
-    link: "/about-me",
-  },
-  {
     name: "Experience",
     id: "experience",
     icon: (
@@ -92,8 +78,8 @@ const navItems = [
     link: "/experience",
   },
   {
-    name: "Projects",
-    id: "projects",
+    name: "Works",
+    id: "works",
     icon: (
       <span
         className="iconify"
@@ -102,7 +88,7 @@ const navItems = [
         data-height="60"
       ></span>
     ),
-    link: "/projects",
+    link: "/works",
   },
   {
     name: "Resume",

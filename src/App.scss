@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap');
+
 .App {
   text-align: center;
   height: 100%;
+  font-family: 'Comfortaa', cursive;
 }
 
 html,
@@ -8,13 +12,39 @@ body,
 #root,
 .slide-routes {
   height: 100%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   overflow-y: auto !important;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.gradient-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .gradient-type {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 100%;
+    border: 1px solid white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active {
+      border-width: 2px;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

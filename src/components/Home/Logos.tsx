@@ -4,7 +4,7 @@ import ReactTooltip from "react-tooltip";
 export const ReactLogo = () => (
   <>
     <ReactTooltip
-      data-tip
+      data-tip="React.js"
       data-for="react"
       place="top"
       type="dark"
@@ -16,7 +16,7 @@ export const ReactLogo = () => (
       id="react"
       className="iconify"
       title="React.js"
-      data-tip="React.js"
+      data-tip="react"
       data-icon="vscode-icons:file-type-reactjs"
       data-width="60"
       data-height="60"

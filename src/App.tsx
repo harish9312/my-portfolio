@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import SlideRoutes from "react-slide-routes";
 import ReactTooltip from "react-tooltip";
-import "./App.css";
+import "./App.scss";
 import { AboutMe } from "./components/AboutMe";
 import { Experience } from "./components/Experience";
 import { Home } from "./components/Home";
@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <SlideRoutes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/works" element={<AboutMe />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
