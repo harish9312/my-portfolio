@@ -29,13 +29,13 @@ const aboutId = "AboutMe";
 
 export const AboutMe = () => {
   const [repoData, setRepoData] = React.useState({ repos: [], isLoading: true })
-  
+
   React.useEffect(() => {
     axios.get(
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
       {
         headers: {
-          "Authorization": 'Bearer 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'
+          "Authorization": 'Bearer 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'
         }
       }
     ).then((result) => {
@@ -65,7 +65,7 @@ export const AboutMe = () => {
             <div className="repos-container">
               {repoData.repos.map((x: { html_url: string, name: string }) => {
                 return <div className="about-me-git" >
-                  <a href={x.html_url} target="_blank" className="git-link"rel="noopener noreferrer"  >
+                  <a href={x.html_url} target="_blank" className="git-link" rel="noopener noreferrer"  >
                     <div className="repo-image">
                       <Image
                         fallback={<Shimmer className="repo-image" width={300} height={200} />}
