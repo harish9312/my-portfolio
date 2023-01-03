@@ -29,13 +29,13 @@ const aboutId = "AboutMe";
 
 export const AboutMe = () => {
   const [repoData, setRepoData] = React.useState({ repos: [], isLoading: true })
-
+  
   React.useEffect(() => {
     axios.get(
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
       {
         headers: {
-          "Authorization": 'Bearer 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'
+          "Authorization": 'Bearer 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'
         }
       }
     ).then((result) => {
