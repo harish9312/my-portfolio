@@ -78,7 +78,7 @@ const navItems = [
     link: "/experience",
   },
   {
-    name: "Works",
+    name: "About Me",
     id: "works",
     icon: (
       <span

@@ -46,6 +46,8 @@
     border-radius: 10px;
     transition: all .3s;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
     img {
       border-radius: 10px;
@@ -162,5 +164,176 @@ a {
 
   .laptop {
     width: 100%;
+  }
+}
+
+
+body {
+
+  --dot-yellow: #fff;
+  --dot-orange: #fff;
+  --dot-pink: #fff;
+  --dot-purple: #fff;
+}
+
+
+.loading-image {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.dot {
+  animation-timing-function: ease-in-out, linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: loading-wave, loading-color-change;
+  border-radius: 50%;
+  margin: 1px;
+  height: 50px;
+  width: 50px;
+}
+
+.dot-1 {
+  animation-delay: 0.1s;
+}
+
+.dot-2 {
+  animation-delay: 0.3s;
+}
+
+.dot-3 {
+  animation-delay: 0.6s;
+}
+
+.dot-4 {
+  animation-delay: 0.9s;
+}
+
+@keyframes loading-wave {
+
+  0%,
+  100% {
+    transform: translateY(-30px);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-color-change {
+
+  0%,
+  100% {
+    background: var(--dot-purple);
+  }
+
+  25% {
+    background: var(--dot-pink);
+  }
+
+  50% {
+    background: var(--dot-orange);
+  }
+
+  75% {
+    background: var(--dot-yellow);
+  }
+}
+
+
+
+:root {
+  --color-bg: #eaeaea;
+  --color-loader: rgb(255, 255, 255);
+  --loader-size: 100px;
+  --loader-speed: 500ms;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff17;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.loader-image {
+  --loader-height: calc(var(--loader-size) / 7);
+  display: flex;
+  position: relative;
+  min-height: 200px;
+  align-items: center;
+}
+
+.loader-image::before {
+  content: '';
+  position: absolute;
+}
+
+.loader-image::before,
+.loader-image>span {
+  display: block;
+  width: var(--loader-height);
+  height: var(--loader-height);
+  border-radius: 50%;
+  background: var(--color-loader);
+
+  animation-name: to-right;
+  animation-duration: var(--loader-speed);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.loader-image>span:nth-child(even) {
+  visibility: hidden;
+}
+
+.loader-image>span:first-child {
+  animation-name: scale-up;
+}
+
+.loader-image>span:last-child {
+  animation-name: scale-up;
+  animation-direction: reverse;
+}
+
+@keyframes to-right {
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
   }
 }

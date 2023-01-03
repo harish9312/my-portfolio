@@ -2,7 +2,7 @@ $gradientOne: linear-gradient(120deg, #c2ff38 0%, #ff3f48 100%);
 $gradientTwo: linear-gradient(to right, #8360c3, #2ebf91);
 $gradientThree: linear-gradient(to right, #fffbd5, #b20a2c);
 $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette:wght@300;400;500;600&family=Gloria+Hallelujah&display=swap');
 
 #particles-js {
   background-color: white;
@@ -13,11 +13,43 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   width: 100%;
 }
 
+.gradient {
+  height: 100%;
+
+  .overlay {
+    height: 100%;
+  }
+}
+
 .home-section {
-  top: 30px;
-  position: relative;
   align-items: center;
   display: flex;
+  height: 100%;
+}
+
+.right-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.right-section-quote {
+  background: rgb(255 255 255 / 57%);
+  color: #2c2c2c;
+  padding: 30px;
+  font-size: 2rem;
+  max-width: 75%;
+  line-height: 1.29;
+  text-align: left;
+  font-family: "Comfortaa", cursive;
+  border-radius: 35px;
+  line-height: 1.5;
+
+  .author {
+    font-weight: 300;
+    font-family: 'Courgette', cursive;
+  }
 }
 
 .information {
@@ -180,9 +212,22 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 
     flex-direction: column;
 
-   
+
     .home-section {
       display: block;
+
+      .right-container {
+        display: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+
+        .right-section-quote {
+          font-size: 1rem;
+          height: auto;
+        }
+      }
 
     }
 

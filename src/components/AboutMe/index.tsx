@@ -1,12 +1,12 @@
 import axios from "axios";
-import { BGGradient } from "../Home";
+import * as React from "react";
 import { HeaderTitle } from "../reusableComponents/HeaderTitle";
 import "./aboutMe.scss";
-import * as React from "react";
 // import { marked } from "marked";
 // import harish from "./harish-id.png";
 // import { LaptopScreen } from "./LaptopScreen";
-import { Image, Shimmer } from 'react-shimmer'
+import { Image } from 'react-shimmer';
+import { BGGradient } from "../reusableComponents/BGGradient";
 
 const date1: any = new Date("7/24/2017");
 const date2: any = new Date();
@@ -35,7 +35,7 @@ export const AboutMe = () => {
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
       {
         headers: {
-          "Authorization": 'Bearer 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'
+          "Authorization": 'Bearer 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'
         }
       }
     ).then((result) => {
@@ -48,7 +48,7 @@ export const AboutMe = () => {
   return (
     <BGGradient>
       <>
-        <div className="about-me-overlay" />
+        <div className="" />
         <HeaderTitle id={aboutId}>Who am I?</HeaderTitle>
         <div id={aboutId} className="about-me-details">
           <div className="right">
@@ -61,14 +61,14 @@ export const AboutMe = () => {
             </div>
           </div>
           <div className="about-me">
-            {/* <div className="git-title" >Repos</div> */}
+            {repoData.isLoading && <Loader />}
             <div className="repos-container">
               {repoData.repos.map((x: { html_url: string, name: string }) => {
                 return <div className="about-me-git" >
                   <a href={x.html_url} target="_blank" className="git-link" rel="noopener noreferrer"  >
                     <div className="repo-image">
                       <Image
-                        fallback={<Shimmer className="repo-image" width={300} height={200} />}
+                        fallback={<ImageLoader />}
                         src={`https://opengraph.githubassets.com/90a1b0a9a526e80d41861ec36e87bf08ab59b581282e855b0c5a1123c1ceb99c/harish9312/${x.name}`}
                       />
                     </div>
@@ -113,3 +113,26 @@ export const AboutMe = () => {
 //     </div>
 //   </>
 // }
+
+const Loader = () => {
+  return <div className='loading'>
+    <span className='dot dot-1'></span>
+    <span className='dot dot-2'></span>
+    <span className='dot dot-3'></span>
+    <span className='dot dot-4'></span>
+  </div>
+}
+
+const ImageLoader = () => {
+  return <div className="loader-container" >
+    <div className="loader-image">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+}

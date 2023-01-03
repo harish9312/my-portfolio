@@ -4,7 +4,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { BGGradient } from "../Home";
+import { BGGradient } from "../reusableComponents/BGGradient";
 import { HeaderTitle } from "../reusableComponents/HeaderTitle";
 import "./experience.scss";
 
