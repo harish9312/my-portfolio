@@ -1,16 +1,18 @@
 .experience {
   font-family: 'Comfortaa', cursive;
 
-  background: linear-gradient(to right, #003973, #e5e5be);
+
   h3,
   h1,
   h4 {
     margin: 0;
   }
+
   .vertical-timeline-element-date {
     color: white;
     font-size: 20px !important;
   }
+
   .vertical-timeline-element--work-left {
     .vertical-timeline-element-date {
       text-align: left !important;

@@ -11,7 +11,7 @@ import "./experience.scss";
 export const Experience = () => {
   return (
     <BGGradient>
-      <div className="">
+      <div className="experience">
         <HeaderTitle>Experience</HeaderTitle>
         <VerticalTimeline>
           <VerticalTimelineElement
