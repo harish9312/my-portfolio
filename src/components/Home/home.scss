@@ -21,6 +21,14 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   }
 }
 
+// .gradient-selector {
+//   margin-top: 10px;
+//   background: rgb(255 255 255 / 62%);
+//   height: 70px;
+//   border-top-left-radius: 10px;
+//   border-bottom-left-radius: 10px;
+// }
+
 .home-section {
   align-items: center;
   display: flex;
@@ -217,11 +225,15 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
       display: block;
 
       .right-container {
-        display: none;
-        width: 100%;
+        position: fixed;
+        top: 64%;
+        z-index: 1000;
+        width: 200px;
+        background: #ffffffc2;
+        right: 10px;
+        border-radius: 10px;
+        max-height: 300px;
         height: auto;
-        display: flex;
-        align-items: center;
 
         .right-section-quote {
           font-size: 1rem;
@@ -297,5 +309,30 @@ $gradientFour: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
         font-size: 1.3rem;
       }
     }
+  }
+}
+
+
+@for $i from 14 through 19 {
+  .box span {
+    &:nth-child(#{$i}) {
+      position: relative;
+      top: 3px;
+      display: inline-block;
+      padding: 0 3px;
+      animation: bounce 0.3s infinite alternate;
+    }
+  }
+}
+
+@keyframes bounce {
+  100% {
+    top: -5px;
+  }
+}
+
+@for $i from 14 through 19 {
+  .box span:nth-child(#{$i}) {
+    animation-delay: ($i - 13)*0.2s;
   }
 }

@@ -24,7 +24,7 @@ export const BGGradient = (props: { children?: React.ReactChild }) => {
     }
 
     return <div className="gradient">
-        <div className={height ? "gradient-selector  mobile-height" : 'gradient-selector  mobile-touch'} onClick={() => setHeight(!height)} >
+        <div className={height ? "gradient-selector mobile-height" : 'gradient-selector mobile-touch'} onClick={() => setHeight(!height)} >
             {isMobile() && <div
                 title="Click to change background gradient"
                 className={`gradient-type active`}
@@ -32,7 +32,7 @@ export const BGGradient = (props: { children?: React.ReactChild }) => {
                     backgroundImage: activeGradient,
                 }}
             />}
-            {isMobile() && gradients.filter(x => isMobile() && x !== activeGradient).map((gradient, index) => {
+            {(isMobile() ? gradients.filter(x => x !== activeGradient) : gradients).map((gradient, index) => {
                 return (
                     <div
                         key={index}

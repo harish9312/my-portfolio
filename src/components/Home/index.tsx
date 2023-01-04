@@ -57,7 +57,12 @@ const RightSection = (props: { quote: IQuote }) => {
   return (
     <div className="right-container" >
       <div className="right-section-quote">
-        {props.quote.isLoading ? <div>Loading Quote...</div> : <>
+        {props.quote.isLoading ? <div className="loading-quote">
+          <div className="box">
+            {'Loading Quote......'.split('').map((x, i) => <span key={i} >{x}</span>)}
+          </div>
+
+        </div> : <>
           <div className="quote">
             {props.quote.quote}
           </div>
