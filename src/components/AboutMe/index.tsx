@@ -7,7 +7,6 @@ import "./aboutMe.scss";
 // import { LaptopScreen } from "./LaptopScreen";
 import { Image } from 'react-shimmer';
 import { BGGradient } from "../reusableComponents/BGGradient";
-
 const date1: any = new Date("7/24/2017");
 const date2: any = new Date();
 const diffTime = Math.abs(date2 - date1);
@@ -27,6 +26,13 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
 const aboutId = "AboutMe";
 
+function parseJwt(token: string) {
+  if (!token) { return; }
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url.replace('-', '+').replace('_', '/');
+  return JSON.parse(window.atob(base64));
+}
+
 export const AboutMe = () => {
   const [repoData, setRepoData] = React.useState({ repos: [], isLoading: true })
 
@@ -35,7 +41,7 @@ export const AboutMe = () => {
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
       {
         headers: {
-          "Authorization": 'Bearer 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'
+          "Authorization": `Bearer ${parseJwt('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJnaHBfYVNRQnFRUWVyWllQQVRIQUNPWmpKaVR5WWFka0hSM2RHcjBtIiwiaWF0IjoxNjcyODA2NTc0fQ.LZ-4qImgOVM7UlcGaj6KuIi7YhFu679HbmoU-UJzZGU').key}`
         }
       }
     ).then((result) => {
