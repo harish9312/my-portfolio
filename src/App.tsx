@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import SlideRoutes from "react-slide-routes";
 import ReactTooltip from "react-tooltip";
 import "./App.scss";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <ReactTooltip />
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <SlideRoutes>
           <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
         </SlideRoutes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
