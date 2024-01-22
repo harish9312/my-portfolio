@@ -41,7 +41,7 @@ export const AboutMe = () => {
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
       {
         headers: {
-          "Authorization": `Bearer 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`
+          "Authorization": `Bearer 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`
         }
       }
     ).then((result) => {
