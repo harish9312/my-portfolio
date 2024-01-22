@@ -18,7 +18,7 @@ import {
   Strapi,
   TS,
 } from "./Logos";
-
+import me from './me.jpg'
 
 interface IQuote { quote: string, author: string, isLoading: boolean }
 
@@ -82,7 +82,7 @@ const LeftSection = () => {
   return (
     <div className="left-section">
       <div className="my-image-container">
-        <img alt="my" className="my-image" src="https://avatars.githubusercontent.com/u/15139445?v=4" />
+        <img alt="my" className="my-image" width={200} src={me} />
       </div>
       <div className="information">
         <Typist
