@@ -39,11 +39,6 @@ export const AboutMe = () => {
   React.useEffect(() => {
     axios.get(
       'https://api.github.com/users/harish9312/repos?per_page=100&sort=updated',
-      {
-        headers: {
-          "Authorization": `Bearer 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`
-        }
-      }
     ).then((result) => {
       setRepoData({
         isLoading: false, repos: result.data
